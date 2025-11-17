@@ -33,8 +33,65 @@ The goal is to identify whether UI Variant **B** leads to improved engagement an
 - Document a professional, end-to-end analytics workflow  
 
 ---
+# 3.Synthetic Dataset Generation
 
+A synthetic dataset of **~1,000 users** and **5,000 sessions** was created using Python (Pandas, NumPy).  
+ ### 🔗 **Datasets**
+- **users.csv** → [Link to file](#)
+- **sessions.csv** → [Link to file](#)
+
+### 🔗 **Python Code**
+- **generate_data.ipynb** → [Link to file](#)
+
+---
+
+# ☁️ 5. AWS Integration — S3 → RDS → SQL
+
+To simulate a real production pipeline:
+
+### Step 1 — Upload to AWS S3  
+- Created an S3 bucket  
+- Uploaded both CSV datasets  
+- Used boto3 to verify file access  
+
+### Step 2 — Create AWS RDS (MySQL) Instance  
+- Provisioned MySQL 8.0 on RDS  
+- Configured inbound rules and security groups  
+- Created database & tables schema  
+
+### Step 3 — Connect Python → S3 → RDS  
+Using boto3 + mysql-connector-python:  
+- Downloaded CSVs from S3  
+- Inserted rows into RDS MySQL  
+- Validated schema  
+
+### Step 4 — SQL Analysis  
+After connecting through Workbench, all SQL queries were executed against normalized tables.
  
+---
+# SQL Questions, Queries, Outputs & Insights
+
+Below are the 10 key analytical questions answered in this project along with their SQL queries, representative outputs, and insights derived.
+
+---
+
+## **Q1. Which UI Variant Performed Better (A vs B)?**
+
+### ✅ SQL Query
+```sql
+SELECT `group`,
+       ROUND(AVG(session_length), 2) AS avg_session_length,
+       ROUND(100 * AVG(watched), 2) AS watch_rate_pct,
+       ROUND(100 * SUM(watch_completion) / SUM(watched), 2) AS completion_rate_pct
+FROM sessions
+GROUP BY `group`;
+```
+
+| group | avg_session_length | watch_rate_pct | completion_rate_pct |
+|-------|---------------------|----------------|----------------------|
+| A     | 11.42               | 67.10%         | 52.80%              |
+| B     | 13.54               | 74.90%         | 62.20%              |
+
 
 
 
