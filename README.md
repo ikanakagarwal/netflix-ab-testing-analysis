@@ -76,8 +76,6 @@ Below are the 10 key analytical questions answered in this project along with th
 ---
 
 ## **Q1. Which UI Variant Performed Better (A vs B)?**
-
-### ✅ SQL Query
 ```sql
 SELECT `group`,
        ROUND(AVG(session_length), 2) AS avg_session_length,
@@ -93,8 +91,30 @@ GROUP BY `group`;
 | B     | 13.54               | 74.90%         | 62.20%              |
 
 
-Insight
+### Insight
 UI Variant B performs better across all engagement metrics (+18% completion uplift).
+
+## Q2. Which device type shows higher engagement?
+
+ ```sql
+ SELECT device_type,
+       ROUND(AVG(session_length), 2) AS avg_session_length,
+       ROUND(100 * AVG(watch_completion), 2) AS completion_rate_pct
+FROM sessions
+GROUP BY device_type
+ORDER BY avg_session_length DESC;
+```
+device_type | avg_session_length | completion_rate_pct
+------------------------------------------------------
+TV          | 15.12              | 61.40%
+Laptop      | 12.32              | 57.85%
+Mobile      | 9.07               | 49.10%
+
+### Insight
+TV shows the highest engagement with longer session lengths and better completion rates.  
+Mobile users show the lowest engagement, indicating potential UI friction on smaller screens.
+
+ 
 
 
 
