@@ -115,6 +115,25 @@ TV shows the highest engagement with longer session lengths and better completio
 Mobile users show the lowest engagement, indicating potential UI friction on smaller screens.
 
  
+## Q3. What time of day has the highest engagement?
 
+### SQL Query
+```sql
+SELECT time_of_day,
+       ROUND(AVG(session_length), 2) AS avg_session_length,
+       ROUND(100 * AVG(watch_completion), 2) AS completion_rate_pct
+FROM sessions
+GROUP BY time_of_day
+ORDER BY avg_session_length DESC;
+ ```
+ time_of_day | avg_session_length | completion_rate_pct
+-------------------------------------------------------
+Night       | 14.10               | 63.20%
+Evening     | 13.20               | 60.45%
+Afternoon   | 10.45               | 55.10%
+Morning     | 8.42                | 48.20%
+Insight
+Night and Evening have the highest engagement, with longer session durations and higher completion rates.
+Morning has the weakest engagement, likely due to shorter available watch time.
 
 
