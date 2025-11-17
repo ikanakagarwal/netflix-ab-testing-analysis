@@ -37,11 +37,11 @@ The goal is to identify whether UI Variant **B** leads to improved engagement an
 
 A synthetic dataset of **~1,000 users** and **5,000 sessions** was created using Python (Pandas, NumPy).  
  ### 🔗 **Datasets**
-- **users.csv** → [https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/users.csv](#)
-- **sessions.csv** → [https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/sessions.csv](#)
+- **users.csv** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/users.csv)
+- **sessions.csv** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/sessions.csv)
 
 ### 🔗 **Python Code**
-- **generate_data.ipynb** → [Link to file](#)
+- **generate_data.ipynb** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/generate_data.ipynb)
 
 ---
 
