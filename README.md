@@ -34,20 +34,7 @@ The goal is to identify whether UI Variant **B** leads to improved engagement an
 
 ---
 
-# 🏗️ 3. Architecture
-Python (Synthetic Data Generation)
-↓
-AWS S3 (Cloud Storage)
-↓
-AWS RDS MySQL (Relational Database)
-↓
-SQL Analysis (A/B Testing + Segmentation)
-↓
-Insights & Product Recommendations
-
----
-
-
+ 
 
 
 
