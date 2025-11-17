@@ -135,6 +135,9 @@ ORDER BY avg_session_length DESC;
 | Evening     | 13.20              | 75.10%         | 60.45%               |
 | Afternoon   | 10.45              | 68.15%         | 55.10%               |
 | Morning     | 8.42               | 59.30%         | 48.20%               |
+
+
+
 Insight
 Night and Evening have the highest engagement, with longer session durations and higher completion rates.
 Morning has the weakest engagement, likely due to shorter available watch time.
