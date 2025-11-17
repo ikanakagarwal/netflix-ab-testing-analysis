@@ -105,11 +105,11 @@ GROUP BY device_type
 ORDER BY avg_session_length DESC;
 ```
 
-device_type | avg_session_length | completion_rate_pct|
-------------------------------------------------------|
-TV          | 15.12              | 61.40%             |
-Laptop      | 12.32              | 57.85%             |
-Mobile      | 9.07               | 49.10%             |
+|device_type | avg_session_length | completion_rate_pct|
+|------------|--------------------|--------------------|
+|TV          | 15.12              | 61.40%             |
+|Laptop      | 12.32              | 57.85%             |
+|Mobile      | 9.07               | 49.10%             |
 
 
 
