@@ -93,5 +93,8 @@ GROUP BY `group`;
 | B     | 13.54               | 74.90%         | 62.20%              |
 
 
+Insight
+UI Variant B performs better across all engagement metrics (+18% completion uplift).
+
 
 
