@@ -1,4 +1,4 @@
-# 📺 Netflix A/B Testing & User Engagement Analysis (Python + SQL + AWS)
+#  Netflix A/B Testing & User Engagement Analysis (Python + SQL + AWS)
 
 This project analyzes how changes in Netflix’s UI design impact user engagement using a simulated A/B test.  
 I generated realistic synthetic user/session datasets using Python, stored them on AWS S3, modeled them in AWS RDS MySQL, and performed SQL-based analysis to measure how UI Variant B performs compared to Variant A.
@@ -7,7 +7,7 @@ The analysis reveals that **Variant B significantly improves watch completion (+
 
 ---
 
-# 🎯 1. Problem Statement
+#  1. Problem Statement
 
 Netflix frequently runs A/B experiments to improve the user experience.  
 This project simulates an A/B test where two different UI designs (A & B) influence:
@@ -23,7 +23,7 @@ The goal is to identify whether UI Variant **B** leads to improved engagement an
 
 ---
 
-# 🔍 2. Objectives
+#  2. Objectives
 
 - Generate realistic, production-like datasets using Python  
 - Build a normalized relational schema (users & sessions)  
@@ -36,16 +36,16 @@ The goal is to identify whether UI Variant **B** leads to improved engagement an
 # 3.Synthetic Dataset Generation
 
 A synthetic dataset of **~1,000 users** and **5,000 sessions** was created using Python (Pandas, NumPy).  
- ### 🔗 **Datasets**
+ ###  **Datasets**
 - **users.csv** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/users.csv)
 - **sessions.csv** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/sessions.csv)
 
-### 🔗 **Python Code**
+###  **Python Code**
 - **generate_data.ipynb** → [Link to file](https://github.com/ikanakagarwal/netflix-ab-testing-analysis/blob/main/generate_data.ipynb)
 
 ---
 
-# ☁️ 5. AWS Integration — S3 → RDS → SQL
+#  5. AWS Integration — S3 → RDS → SQL
 
 To simulate a real production pipeline:
 
